@@ -1,5 +1,5 @@
 <?php	 
-	$conn = pg_connect("host=ec2-18-204-74-74.compute-1.amazonaws.com dbname=ddcul1krvca7nt user=rrazuzxslncjlg password=bb9362cb79376fa38b5d90c020c36dfd99c0184b4eb82f4405353190588f52b9 port=5432");
+	$conn = pg_connect("host=ec2-52-21-252-142.compute-1.amazonaws.com dbname=dcle2fpc522se2 user=fmneqfpwrsmfic password=f2f4b403db219824f6af70a62a6cd17f982167cdc23ef004cf3ed53e403f98f4 port=5432");
 	if(!$conn){echo "Lost Connect";}
 	if(isset($_POST['login'])){
 		$username = $_POST['username'];
@@ -9,12 +9,9 @@
 		$check = pg_num_rows($result);
 		if($check == 1){
 			echo "Vao dc roi";
-			header("Location:chucmung.php");
 		}
 		else{
 			echo "Vao lai di";
 		}
 	}
-			
-
  ?>
