@@ -1,0 +1,16 @@
+*{
+	border: 0;
+	margin: 0;
+}
+.container tr th{
+	text-align: center;
+	border: 1px solid black;
+	padding: auto;
+}
+.container td{
+	text-align: center;
+	border: 1px solid black;
+}
+.row img{
+	width: 300px;
+}

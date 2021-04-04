@@ -1,0 +1,41 @@
+.product-image{
+  max-width: 100%;
+  padding:10px;
+}
+
+.product-image img
+{
+	position: center;
+  	max-width:100%;
+  	height:auto;
+  	max-height: 200px;
+}
+.r-container{
+	padding: 15px;
+}
+.product-title{
+	font-size: 20px;
+}
+.product{
+	background-color: #3333;
+    padding: 10px;
+    margin: 5px;
+    float: left;
+    height:300px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+}
+.single-product{
+    text-align: center;
+}
+.hot-singer{
+	background-color: black;
+	color: white;
+	font-size: 23px;
+}
+.footer-web{
+	background-color: black;
+	color: white;
+	font-size: 23px;
+}
