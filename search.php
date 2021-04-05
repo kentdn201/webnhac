@@ -29,13 +29,13 @@
 
 				<?php 
 					if( !empty( $timkiem)){
-						$rs = mysqli_query( $conn , "SELECT * FROM music WHERE name LIKE '%{$timkiem}%'");
+						$rs = pg_query( $conn , "SELECT * FROM product WHERE name LIKE '%{$timkiem}%'");
 						while ( $row = mysqli_fetch_assoc( $rs)) {
 						?>
-						<a href="single-product.php?id=<?php echo $row['id']?>" class="product">
-							<div class="product-image"><img src="images/<?php echo $row['anh']?>"></div>
+						<a href="single-product.php?id=<?php echo $row['productid']?>" class="product">
+							<div class="product-image"><img src="images/<?php echo $row['image']?>"></div>
 							<h2 class="product-title"><?php echo $row['name']?></h2>
-							<p><?php echo $row['casi']?></p>
+							<p><?php echo $row['type']?></p>
 						</a>
 				<?php
 					}
