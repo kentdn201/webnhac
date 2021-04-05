@@ -21,8 +21,7 @@
 	<div class="container">
 		<div class="single-product">
 				<?php 
-					$id = $_GET['productid'];
-
+					$id = $_GET['id'];
 					$sql = "SELECT * FROM product WHERE productid = {$id}";
 					$rs = pg_query($conn, $sql);
 
@@ -46,7 +45,7 @@
 							}
 						?>	
 
-					</div>
+			</div>
 		</div>
 	</div>
 </div>
