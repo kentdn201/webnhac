@@ -30,7 +30,7 @@
 				<?php 
 					if( !empty( $timkiem)){
 						$rs = pg_query( $conn , "SELECT * FROM product WHERE name LIKE '%{$timkiem}%'");
-						while ( $row = mysqli_fetch_assoc( $rs)) {
+						while ( $row = pg_fetch_assoc( $rs)) {
 						?>
 						<a href="single-product.php?id=<?php echo $row['productid']?>" class="product">
 							<div class="product-image"><img src="images/<?php echo $row['image']?>"></div>
