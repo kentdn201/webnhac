@@ -42,41 +42,7 @@
 		<br>
 	</div>
 	<div class="container">
-		<div class="col-xs-12 col-sm-8 col-md-12">
-			<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;">Best sales</h2>
-			<?php
-			if(!empty($_GET['page']))
-		        {
-		          $page=$_GET['page']-1;
-		        }
-		        else
-		        {
-		          $page =0;
-		        }
-    			//$page = !empty($_GET['page']) ? ($_GET['page'] - 1): 0 ; //lay page hien tai
-      			$product_per_page = 4; //1 trang 3 sp 
-      			$offset = $product_per_page * $page; //offset chinh la phan can bo qua 
-		      $sql = "SELECT * FROM product LIMIT $offset,$product_per_page ";
-		      $rs = pg_query($conn, $sql);
 
-		      if(pg_num_rows($rs) > 0 ){
-		        while( $row = pg_fetch_assoc($rs) ){
-		      ?>
-		      	<div>
-			        <a href="single-product.php?id=<?php echo $row['productid']?>" class="product">
-					<div class="product-image"><img src="images/<?php echo $row['image']?>"></div>
-					<h2 class="product-title"><?php echo $row['name']?></h2>
-					<p><?php echo $row['type']?></p>
-					<p><?php echo $row['price']?></p>
-				</a>
- 			</div>
-		    <?php 
-
-		        }//end while 
-
-		      }//check so hang tra ve > 0 
-
-		?>
 		</div>
 	</div>
 	<div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
