@@ -4,10 +4,10 @@
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		include("inc/conn.php");
 
-		$username = $_POST['name'];
+		$username = $_POST['user'];
 		$password = $_POST['pass'];
 
-		$user = mysqli_fetch_assoc( mysqli_query( $conn, "SELECT * FROM account WHERE username='{$username}' AND password='{$password}'"));
+		$user = pg_fetch_assoc( pg_query( $conn, "SELECT * FROM account WHERE _username='{$username}' AND _password='{$password}'"));
 		if($user){
 			$_SESSION['user']= $user['username'];
 			header('location:index.php');
@@ -43,11 +43,11 @@
 				<h2 style="text-align: center;">Login</h2>
 				<div class="form-group">
 					<label for="name">Username:</label>
-					<input type="text" class="form-control" id="name" placeholder="Enter Usename Here" name="name" required>
+					<input type="text" class="form-control" id="_username" placeholder="Enter Usename Here" name="name" required>
 				</div>
 				<div class="form-group">
 					<label for="pass">Password:</label>
-					<input type="password" class="form-control" id="pass" placeholder="Enter Password Here" name="pass" required>
+					<input type="password" class="form-control" id="_password" placeholder="Enter Password Here" name="pass" required>
 				</div>
 				<a href="signup.php">If dont have account sign up here</a><br><br>
 					<button type="submit" class="btn btn-danger btn-block">Submit</button>
