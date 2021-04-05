@@ -44,15 +44,11 @@ session_start();
 		<div class="col-xs-12 col-md-8 col-sm-8 row-container">
 			<form method="post">
 				<h2 style="text-align: center;">Login</h2>
-				<div class="form-group">
-					<label for="name">Username:</label>
-					<input type="text" class="form-control" id="user" placeholder="Enter Usename Here" name="username" required>
-				</div>
-				<div class="form-group">
-					<label for="pass">Password:</label>
-					<input type="password" class="form-control" id="pass" placeholder="Enter Password Here" name="password" required>
-				</div>
-				<button type="submit" class="btn btn-danger btn-block">Submit</button>
+				<label>username</label>
+				<input type="text" name="username">
+				<label>password</label>
+				<input type="password" name="password">
+				<button name="login" type="submit" value="login">Login</button>
 			</form>
 		</div>
 	</div>
