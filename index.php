@@ -18,7 +18,7 @@
 <body>
 	<div class="container">
 		<?php
-			include("inc/header.php")
+			include("inc/header.php");
 		?>
 		<div id="carouselExampleIndicators" class="carousel slide mt-1" data-ride="carousel">
 		  <ol class="carousel-indicators">
@@ -59,7 +59,7 @@
     			//$page = !empty($_GET['page']) ? ($_GET['page'] - 1): 0 ; //lay page hien tai
       			$product_per_page = 4; //1 trang 3 sp 
       			$offset = $product_per_page * $page; //offset chinh la phan can bo qua 
-		      $sql = "SELECT * FROM product LIMIT $offset,$product_per_page ";
+		      $sql = "SELECT * FROM product LIMIT $offset,$product_per_page";
 		      $rs = pg_query($conn, $sql);
 
 		      if(pg_num_rows($rs) > 0 ){
