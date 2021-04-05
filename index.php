@@ -41,13 +41,7 @@
 		    <a href="kpop.php">
 		      <img class="d-block w-100" src="images/qc1.jpg" alt="First slide">
 		  	</a>
-		    </div>
-		    <div class="carousel-item">
-		      <img class="d-block w-100" src="images/qc2.jpg" alt="Second slide">
-		    </div>
-		    <div class="carousel-item">
-		      <img class="d-block w-100" src="images/qc4.jpg" alt="Third slide">
-		    </div>
+			</div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -62,15 +56,15 @@
 	</div>
 	<div class="container">
 		<div class="col-xs-12 col-sm-8 col-md-12">
-			<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;">Những bài hát mới nhất</h2>
+			<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;">Best sales</h2>
 		</div>
 	</div>
 	<div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
-			<h3 style="display: none;">Most Popular Singer</h3>
+			<h3 style="display: none;"></h3>
 	</div>
 <footer id="sticky-footer" class="py-3 bg-dark text-white-50 container">
     <div class="text-center">
-      <small>Get music to everyone</small>
+      <small>Get toy to everyone</small>
     </div>
   </footer>
 </body>
