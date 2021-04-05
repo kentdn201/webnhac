@@ -21,21 +21,18 @@
 	<div class="container">
 		<div class="single-product">
 				<?php 
-					$id = $_GET['id'];
+					$id = $_GET['productid'];
 
-					$sql = "SELECT * FROM music WHERE id = {$id}";
-					$rs = mysqli_query($conn, $sql);
+					$sql = "SELECT * FROM product WHERE productid = {$id}";
+					$rs = pg_query($conn, $sql);
 
-					while ( $row = mysqli_fetch_assoc($rs) ){
+					while ( $row = pg_fetch_assoc($rs) ){
 						?>
 						<div class="single-product">
-							<div class="product-image"><img src="images/<?php echo $row['anh']?>"></div>
+							<div class="product-image"><img src="images/<?php echo $row['image']?>"></div>
 							<h2 class="product-title"><?php echo $row['name']?></h2>
-							<p><?php echo $row['casi']?></p>
+							<p><?php echo $row['description']?></p>
 							<p><?php echo $row['price'] . "$"?></p>
-							<audio id='audio_1' controls preload loop controlsList="nodownload">
-		 						<source src='music/<?php echo $row['file']?>'/>
-		 					</audio>
                             <br>
                             <a href="buy-success.php?id=<?php echo $row['id']?>"><input type="submit" onclick="alert('Buy Success')" class="btn btn-danger" value="Pay"></a>
 							<div class="product-content">
