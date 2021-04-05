@@ -12,17 +12,14 @@
 	      <li>
 	      	<a class="nav-link" href="admin/login.php">Admin</a>
 	      </li>
-	      <li>
-	      	<a class="nav-link" href="login.php">Login</a>
-	      </li>
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Location
+	          Type
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="vpop.php">V-POP</a>
-	          <a class="dropdown-item" href="usuk.php">US-UK</a>
-	          <a class="dropdown-item" href="kpop.php">K-POP</a>
+	          <a class="dropdown-item" href="vpop.php">Lego</a>
+	          <a class="dropdown-item" href="usuk.php">For baby</a>
+	          <a class="dropdown-item" href="kpop.php">For teen</a>
 	        </div>
 	      </li>
 	    </ul>
