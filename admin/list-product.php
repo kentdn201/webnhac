@@ -19,7 +19,7 @@
         <!-- Page Content  -->
       <div id="content" class="p-4 p-md-5 pt-5">
       		<?php 
-				require_once("inc/conn.php");
+			require_once("inc/conn.php");
       		?>
       	<div class="list-song col-xs-12 col-md-12 col-sm-12">
       		<style>
@@ -45,11 +45,11 @@
 
 				    $idxoa = $_GET['idxoa'];
 
-				    $sql ="DELETE FROM music WHERE id={$idxoa} limit 1";
+				    $sql ="DELETE FROM product WHERE productid={$idxoa} limit 1";
 				    if( mysqli_query($conn, $sql)){
-				     echo "Delete Success Music ID: ".$idxoa;
+				     echo "Delete Success Product ID: ".$idxoa;
 				    } else{
-				    echo "Error" .mysqli_error($conn);
+				    echo "Error" .pg_error($conn);
 				    }
 				  }
 
@@ -58,10 +58,8 @@
 				<thead>
 					<th>ID</th>
 					<th>Image</th>
-					<th>File</th>
 					<th>Name</th>
-					<th>Singer</th>
-					<th>Location</th>
+					<th>Type</th>
 					<th>Price</th>
 					<th ></th>
 					<th></th>
@@ -69,25 +67,19 @@
 
 				<tbody>
 					<?php
-						$query = "SELECT * FROM music";
-						$rs = mysqli_query( $conn, $query);
-						if( mysqli_num_rows( $rs ) > 0)
-							while( $row = mysqli_fetch_assoc( $rs )){
+						$query = "SELECT * FROM product";
+						$rs = pg_query( $conn, $query);
+						if( pg_num_rows( $rs ) > 0)
+							while( $row = pg_fetch_assoc( $rs )){
 					?>
 					<tr>
-						<td><?= $row['id']?></td>
-						<td><img style="width:60px; height:60px; " class="anh-sp" src="../images/<?= $row['anh']?>"></td>
-						<td>
-							<audio id='audio_1' controls preload loop>
-		 						<source src='music/<?php echo $row['file']?>'/>
-		 					</audio>
-						</td>
+						<td><?= $row['productid']?></td>
+						<td><img style="width:60px; height:60px; " class="anh-sp" src="../images/<?= $row['image']?>"></td>
 						<td><?= $row['name']?></td>
-						<td><?= $row['casi']?></td>
-						<td><?= $row['location']?></td>
-						<td><?= $row['price'] . "$"?></td>
-						<td><a href="suasp.php?id=<?= $row['id']?>">Fix</a></td>
-						<td><a href="?idxoa=<?= $row['id']?>">Delete</a></td>
+						<td><?= $row['type']?></td>
+						<td><?= $row['price'] . "VND"?></td>
+						<td><a href="suasp.php?id=<?= $row['productid']?>">Fix</a></td>
+						<td><a href="?idxoa=<?= $row['product']?>">Delete</a></td>
 					</tr>
 
 					<?php
