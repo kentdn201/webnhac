@@ -61,7 +61,7 @@
       			$offset = $product_per_page * $page; //offset chinh la phan can bo qua 
 		      $sql = "SELECT * FROM product LIMIT $offset,$product_per_page";
 		      $rs = pg_query($conn, $sql);
-
+				var_dump($rs)
 		      if(pg_num_rows($rs) > 0 ){
 		        while( $row = pg_fetch_assoc($rs) ){
 		 ?>
