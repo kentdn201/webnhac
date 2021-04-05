@@ -64,11 +64,12 @@
 		      ?>
 		      	<div>
 			        <a href="single-product.php?id=<?php echo $row['productid']?>" class="product">
-			            <div class="product-image"><img src="images/<?php echo $row['image'] ?>" /></div>
-			            <h2 class="product-title"><?php echo $row['name'] ?></h2>
-			            <p><?php echo $row['type']?></p>
-	 				</a>
- 				</div>
+					<div class="product-image"><img src="images/<?php echo $row['image']?>"></div>
+					<h2 class="product-title"><?php echo $row['name']?></h2>
+					<p><?php echo $row['type']?></p>
+					<p><?php echo $row['price']?></p>
+				</a>
+ 			</div>
 		    <?php 
 
 		        }//end while 
