@@ -42,15 +42,15 @@ session_start();
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-xs-12 col-md-8 col-sm-8 row-container">
-			<form method="POST" action="index.php">
+			<form method="POST">
 				<h2 style="text-align: center;">Login</h2>
 				<div class="form-group">
 					<label for="name">Username:</label>
-					<input type="text" class="form-control" id="name" placeholder="Enter Usename Here" name="username" required>
+					<input type="text" class="form-control" id="username" placeholder="Enter Usename Here" name="username" required>
 				</div>
 				<div class="form-group">
 					<label for="pass">Password:</label>
-					<input type="password" class="form-control" id="pass" placeholder="Enter Password Here" name="password" required>
+					<input type="password" class="form-control" id="password" placeholder="Enter Password Here" name="password" required>
 				</div>
 				<a href="signup.php">If dont have account sign up here</a><br><br>
 					<button type="submit" class="btn btn-danger btn-block">Submit</button>
