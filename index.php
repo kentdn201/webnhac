@@ -81,10 +81,5 @@
 		?>
 		</div>
 	</div>
-<footer id="sticky-footer" class="py-3 bg-dark text-white-50 container">
-    <div class="text-center">
-      <small>Get toy to everyone</small>
-    </div>
-  </footer>
 </body>
 </html>
