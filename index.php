@@ -28,7 +28,7 @@
 		  </ol>
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
-		    <a href="kpop.php">
+		    <a href=".">
 		      <img class="d-block w-100" src="images/qc1.jpg" alt="First slide">
 		  	</a>
 			</div>
