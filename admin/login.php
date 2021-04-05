@@ -24,34 +24,39 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
-   <!--Made with love by Mutiullah Samim -->
-   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Login Form</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-	<div class="container">
-		<div class="card">
-			<h3>Sign In</h3>
+	<style>
+		body{
+			background: url('images/anhlogin.jpg');
+			background-size: cover;
+		}
+	</style>
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-xs-12 col-md-8 col-sm-8 row-container">
+			<form method="POST" action="index.php">
+				<h2 style="text-align: center;">Login</h2>
+				<div class="form-group">
+					<label for="name">Username:</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter Usename Here" name="username" required>
+				</div>
+				<div class="form-group">
+					<label for="pass">Password:</label>
+					<input type="password" class="form-control" id="pass" placeholder="Enter Password Here" name="password" required>
+				</div>
+				<a href="signup.php">If dont have account sign up here</a><br><br>
+					<button type="submit" class="btn btn-danger btn-block">Submit</button>
+			</form>
 		</div>
-		<form method="post">
-			<div class="card-body">
-				<label>username</label>
-				<input type="text" name="username">
-				<label>password</label>
-				<input type="password" name="password">
-				<button name="login" type="submit" value="login">Login</button>
-			</div>
-		</form>
 	</div>
+</div>
 </body>
 </html>
