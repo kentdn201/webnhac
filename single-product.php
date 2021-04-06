@@ -33,7 +33,7 @@
 							<p><?php echo $row['description']?></p>
 							<p><?php echo $row['price'] . "$"?></p>
                             <br>
-                            <a href="buy-success.php?id=<?php echo $row['id']?>"><input type="submit" onclick="alert('Buy Success')" class="btn btn-danger" value="Pay"></a>
+                            <a href="index.php?<?php echo $row['id']?>"><input type="submit" onclick="alert('Buy Success')" class="btn btn-danger" value="Pay"> </a>
 							<div class="product-content">
 								<?php echo $row['lyric']?>
 							</div>
