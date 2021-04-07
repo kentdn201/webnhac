@@ -72,30 +72,23 @@
       <div id="main" class="add-song">
         <form class="form" method="post">
 
-          <label>Input name song</label>
-          <input type="text" placeholder="Enter name for for the song" name="name">
+          <label>Input name toy</label>
+          <input type="text" placeholder="Enter name for for the toy" name="name">
 
-          <label>Input lyric for the song</label>
-          <textarea name="lyric" placeholder="Enter lyric for the song" type="text"></textarea>
+          <label>Input description for the toy</label>
+          <textarea name="description" placeholder="Enter description for the toy" type="text"></textarea>
 
-          <label>Input name singer for the song</label>
-          <input name="casi" placeholder="Enter singer for the song" type="text">
+          <label>Input type for the toy</label>
+          <input name="type" placeholder="Enter type for the toy" type="text">
 
-          <label>Input location for the song</label>
-            <select name="khuvuc" id="khuvuc">
-                <option value="V-POP">V-POP</option>
-                <option value="K-POP">K-POP</option>
-                <option value="US-UK">US-UK</option>
-            </select>
-            
           <label>Input price for the song</label>
-          <input name="price" placeholder="Enter price for the song" type="number">
+          <input name="price" placeholder="Enter price for the toy" type="number">
           
-          <label>Input Song</label>
-                    <input type="file" name="baihat">
-
+          <label>Input get date for the toy</label>
+          <input name="type" placeholder="Enter type for the toy" type="text">
+          
           <label>Input Image</label>
-                    <input type="file" name="anh">
+                    <input type="file" name="image">
 
           <input type="submit" name="submit" class="btn btn-danger btn-block" value="Add">
           </form>
