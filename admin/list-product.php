@@ -45,7 +45,7 @@
 
 				    $idxoa = $_GET['idxoa'];
 
-				    $sql ="DELETE FROM public.product WHERE productid={$idxoa} limit 1";
+				    $sql ="DELETE FROM product WHERE productid={$idxoa} limit 1";
 				    if( pg_query($conn, $sql)){
 				     echo "Delete Success Product ID: ".$idxoa;
 				    } else{
