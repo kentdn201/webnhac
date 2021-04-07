@@ -56,7 +56,11 @@
 		   
              //insert data to php
            	 $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES ('{$name}','{$description}','{$type}',{$price},'{$getdate}','{$image}')";
-		pg_query($conn, $sql);
+		if(pg_query($conn, $sql)){
+			echo"done";
+		}else{
+			echo "false";
+		}
 		  if(!empty($image)){
 			  $tar_dir = "../inc/";
 			  $tar_file = $tar_dir.$imagename;
