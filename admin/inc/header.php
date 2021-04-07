@@ -10,10 +10,10 @@
 		  		<h1><a href="index.php" class="logo">NamMP3</a></h1>
 	        <ul class="list-unstyled components mb-5">
 	        <li class="active">
-	        <a href="list-product.php" data-toggle="collapse" aria-expanded="false">Song Manager</a>
+	        <a href="list-product.php" data-toggle="collapse" aria-expanded="false">Product Manager</a>
 		</li>
                 <li>
-                 <a href="list-product.php">Song</a>
+                 <a href="list-product.php">Product list</a>
                 </li>
                 <li>
                   <a href="add-product.php">Add</a>
