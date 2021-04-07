@@ -48,8 +48,8 @@
 			if( $_SERVER['REQUEST_METHOD']=='POST'){
 			$id = $_GET['id'];
 	           	$name = $_POST['name'];
-	            	$lyric = $_POST['lyric'];
-	            	$casi = $_POST['casi'];
+	            	$description = $_POST['description'];
+	            	$type = $_POST['type'];
 	            	$khuvuc = $_POST['khuvuc'];
 	            	$price = $_POST['price'];
 	            	$file = $_FILES['anhsp'];
@@ -58,37 +58,14 @@
 				{
 					$tenfile = rand() . $file['name'];
 					if( move_uploaded_file($file['tmp_name'], "../images/" .$tenfile)){
-
-						$sql = "UPDATE music SET anh=? WHERE id=?";
-						$stmt = mysqli_prepare($conn, $sql);
-						mysqli_stmt_bind_param( $stmt, "sd", $tenfile, $id);
-						mysqli_stmt_execute($stmt);
+						echo "success";
 					}
 					else
 					{
 						echo "Error";
 					}
 				}
-			
-				if( !empty( $song))
-				{
-					$namesong = rand() . $song['name'];
-					if( move_uploaded_file($song['tmp_name'], "music/" .$namesong)){
-
-						$sql = "UPDATE music SET file=? WHERE id=?";
-						$stmt = mysqli_prepare($conn, $sql);
-						mysqli_stmt_bind_param( $stmt, "sd", $namesong, $id);
-						mysqli_stmt_execute($stmt);
-					}
-					else
-					{
-						echo "";
-					}
-				}
-			
-
-
-			$sql = "UPDATE music SET name=?, lyric=?, casi=?, location=?, price=? WHERE id=?";
+			$sql = "UPDATE product SET name=?, description=?, type=?, price=? WHERE id=?";
 			$stmt = mysqli_prepare($conn, $sql);
 			mysqli_stmt_bind_param( $stmt, "ssssdd" , $name, $lyric, $casi, $khuvuc, $price, $id);
 			if( mysqli_stmt_execute( $stmt ))
