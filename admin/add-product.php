@@ -48,25 +48,24 @@
           <?php
             if( $_SERVER['REQUEST_METHOD'] == 'POST'){
             $name = $_POST['name'];
-            $lyric = $_POST['lyric'];
-            $casi = $_POST['casi'];
-            $khuvuc = $_POST['khuvuc'];
+            $description = $_POST['description'];
+            $type = $_POST['type'];
             $price = $_POST['price'];
-            $baihat = $_POST['baihat'];
-            $anh = $_POST['anh'];
+            $getdate = $_POST['getdate'];
+            $image = $_POST['image'];
             
-            $sql = " INSERT INTO music( name, lyric, casi, location, price, file, anh) VALUES (?,?,?,?,?,?,?)";
-            $stmt = mysqli_prepare($conn, $sql);
-            mysqli_stmt_bind_param( $stmt, "ssssdss", $name, $lyric, $casi, $khuvuc, $price, $baihat, $anh);
+            $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES (?,?,?,?,?,?)";
+            $stmt = pg_prepare($conn, $sql);
+            pg_stmt_bind_param( $stmt, "sssdss", $name, $description, $type, $price, $getdate, $image);
 
             //s = string
             // d = double
             // i = interger
-            if( mysqli_stmt_execute( $stmt )){
+            if( pg_stmt_execute( $stmt )){
             echo "Add Success";
             }
             else{
-            echo "Error: ". mysqli_error($conn);
+            echo "Error: ". pg_error($conn);
             }
           }
           ?>
