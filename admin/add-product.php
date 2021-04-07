@@ -4,9 +4,7 @@
     <title>Admin Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -46,28 +44,18 @@
 
         <div>
           <?php
+			include('/inc/conn.php');
             if( $_SERVER['REQUEST_METHOD'] == 'POST'){
-            $name = $_POST['name'];
-            $description = $_POST['description'];
-            $type = $_POST['type'];
-            $price = $_POST['price'];
-            $getdate = $_POST['getdate'];
-            $image = $_POST['image'];
-            
-            $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES (?,?,?,?,?,?)";
-            $stmt = pg_prepare($conn, $sql);
-            pg_stmt_bind_param( $stmt, "sssiss", $name, $description, $type, $price, $getdate, $image);
-
-            //s = string
-            // d = double
-            // i = interger
-            if( pg_stmt_execute( $stmt )){
-            echo "Add Success";
-            }
-            else{
-            echo "Error: ". pg_error($conn);
-            }
-          }
+           	 $name = $_POST['name'];
+           	 $description = $_POST['description'];
+           	 $type = $_POST['type'];
+           	 $price = $_POST['price'];
+           	 $getdate = $_POST['getdate'];
+          	 $image = $_POST['image'];
+             //insert data to php
+            $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES ('{$name}','{$description}','{$type}',{$price},'{$getdate}','{$image}')";
+			$result = pg_query($conn, $sql);
+			}
           ?>
       <div id="main" class="add-song">
         <form class="form" method="post">
