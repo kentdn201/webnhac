@@ -64,7 +64,7 @@
 		      if(pg_num_rows($rs) > 0 ){
 		        while( $row = pg_fetch_assoc($rs) ){
 		 ?>
-		      	<div>
+		      	<div style="col-xs-4">
 			        <a href="single-product.php?id=<?php echo $row['productid']?>" class="product">
 					<div class="product-image"><img src="images/<?php echo $row['image']?>"></div>
 					<h2 class="product-title"><?php echo $row['name']?></h2>
