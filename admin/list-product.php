@@ -46,7 +46,7 @@
 				    $idxoa = $_GET['idxoa'];
 
 				    $sql ="DELETE FROM product WHERE productid={$idxoa}";
-				    if( pg_query($conn, $sql)){
+				    if(pg_query($conn, $sql)){
 				     echo "Delete Success Product ID: ".$idxoa;
 				    } else{
 				    echo "Error" .pg_error($conn);
