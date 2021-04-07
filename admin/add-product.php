@@ -44,7 +44,6 @@
 
         <div>
           <?php
-			include('/inc/conn.php');
             if( $_SERVER['REQUEST_METHOD'] == 'POST'){
            	 $name = $_POST['name'];
            	 $description = $_POST['description'];
@@ -54,7 +53,8 @@
           	 $image = $_POST['image'];
              //insert data to php
             $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES ('{$name}','{$description}','{$type}',{$price},'{$getdate}','{$image}')";
-			$result = pg_query($conn, $sql);
+		pg_query($conn, $sql);
+		
 			}
           ?>
       <div id="main" class="add-song">
@@ -73,10 +73,10 @@
           <input name="price" placeholder="Enter price for the toy" type="number">
           
           <label>Input get date for the toy</label>
-          <input name="type" placeholder="Enter type for the toy" type="text">
+          <input name="getdate" placeholder="Enter type for the toy" type="text">
           
           <label>Input Image</label>
-                    <input type="file" name="image">
+           <input type="file" name="image">
 
           <input type="submit" name="submit" class="btn btn-danger btn-block" value="Add">
           </form>
