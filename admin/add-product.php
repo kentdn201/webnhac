@@ -56,7 +56,7 @@
             
             $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES (?,?,?,?,?,?)";
             $stmt = pg_prepare($conn, $sql);
-            pg_stmt_bind_param( $stmt, "sssdss", $name, $description, $type, $price, $getdate, $image);
+            pg_stmt_bind_param( $stmt, "sssiss", $name, $description, $type, $price, $getdate, $image);
 
             //s = string
             // d = double
