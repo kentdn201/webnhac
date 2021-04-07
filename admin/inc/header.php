@@ -9,19 +9,19 @@
 				<div class="p-4 pt-5">
 		  		<h1><a href="index.php" class="logo">NamMP3</a></h1>
 	        <ul class="list-unstyled components mb-5">
-	          <li class="active">
-	            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Song Manager</a>
-	            <ul class="collapse list-unstyled" id="homeSubmenu">
+	        <li class="active">
+	        <a href="list-product.php" data-toggle="collapse" aria-expanded="false">Song Manager</a>
+		</li>
                 <li>
-                    <a href="list-song.php">Song</a>
+                 <a href="list-product.php">Song</a>
                 </li>
                 <li>
-                  <a href="add-song.php">Add</a>
+                  <a href="add-product.php">Add</a>
                 </li>
-	            </ul>
-	          </li>
-	          <li>
-              <a href="logout.php">Logout</a>
+	         </li>
+	         <li>
+              	<a href="logout.php">Logout</a>
+		</li>
 	        </ul>
 	      </div>
 	  </nav>
