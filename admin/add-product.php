@@ -51,15 +51,28 @@
            	 $price = $_POST['price'];
            	 $getdate = $_POST['getdate'];
           	 $image = $_POST['image'];
+		 $imagename = basename($_FILES['image']['name']);
+		 
+		   
              //insert data to php
-            $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES ('{$name}','{$description}','{$type}',{$price},'{$getdate}','{$image}')";
+           	 $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES ('{$name}','{$description}','{$type}',{$price},'{$getdate}','{$image}')";
 		pg_query($conn, $sql);
-		
+		  if(!empty($image)){
+			  $tar_dir = "../inc/";
+			  $tar_file = $tar_dir.$imagename;
+			if(move_uploaded_file($_FILES['image']['tmp_name'] , $tar_file){
+				echo " done ";
+			}else{
+				echo "error";
 			}
+			  
+		  }
+		 
+	   }
           ?>
       <div id="main" class="add-song">
         <form class="form" method="post">
-
+		
           <label>Input name toy</label>
           <input type="text" placeholder="Enter name for for the toy" name="name">
 
