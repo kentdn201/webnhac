@@ -7,7 +7,7 @@
 	        </button>
         </div>
 				<div class="p-4 pt-5">
-		  		<h1><a href="index.php" class="logo">NamMP3</a></h1>
+		  		<h1><a href="index.php" class="logo">ATN</a></h1>
 	        <ul class="list-unstyled components mb-5">
 	        <li class="active">
 	        <a href="list-product.php" data-toggle="collapse" aria-expanded="false">Product Manager</a>
