@@ -46,14 +46,14 @@
 
 		<?php
 			if( $_SERVER['REQUEST_METHOD']=='POST'){
-				$id = $_GET['id'];
-	            $name = $_POST['name'];
-	            $lyric = $_POST['lyric'];
-	            $casi = $_POST['casi'];
-	            $khuvuc = $_POST['khuvuc'];
-	            $price = $_POST['price'];
-	            $file = $_FILES['anhsp'];
-            	$song = $_FILES['song'];
+			$id = $_GET['id'];
+	           	$name = $_POST['name'];
+	            	$lyric = $_POST['lyric'];
+	            	$casi = $_POST['casi'];
+	            	$khuvuc = $_POST['khuvuc'];
+	            	$price = $_POST['price'];
+	            	$file = $_FILES['anhsp'];
+            		$song = $_FILES['song'];
 				if( !empty( $file))
 				{
 					$tenfile = rand() . $file['name'];
