@@ -10,7 +10,7 @@
 		  		<h1><a href="index.php" class="logo">ATN</a></h1>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
-	            <a href="list-product.php" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Product Manager</a>
+	            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Song Manager</a>
 	            <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
                     <a href="list-product.php">Song</a>
@@ -20,6 +20,15 @@
                 </li>
 	            </ul>
 	          </li>
+	          	<li>
+	            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Account Manager</a>
+	            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a href="list-account.php">Account</a>
+                </li>
+                <li>
+                  <a href="add-account.php">Add</a>
+                </li>
 	            </ul>
 	          </li>
 	          <li>
