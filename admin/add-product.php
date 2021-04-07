@@ -14,7 +14,7 @@
     
   <?php
       include("inc/header.php");
-      require_once("../inc/conn.php");
+      require_once("inc/conn.php");
       ?>
       <style>
         .add-song{
