@@ -1,10 +1,5 @@
     <div class="wrapper d-flex align-items-stretch">
 	<nav id="sidebar">
-		<div class="custom-menu">
-			<button type="button" id="sidebarCollapse" class="btn btn-primary">
-	          	<i class="fa fa-bars"></i>
-	        	</button>
-   </div>
 	<div class="p-4 pt-5">
 		<h1><a href="index.php" class="logo">ATN</a></h1>
 	        <ul class="list-unstyled components mb-5">
