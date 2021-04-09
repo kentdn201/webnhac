@@ -1,5 +1,5 @@
 <?php
-include("../inc/conn.php");
+	include("inc/header.php");
 if( $_SERVER['REQUEST_METHOD'] =='GET' && !EMPTY($_GET['idxoa'])){
 	$idxoa = $_GET['idxoa'];
 	$sql = "DELETE FROM product WHERE product_id = {$idxoa}";
