@@ -19,5 +19,7 @@
 				  }
 
       			?>
+<?php
 include ("inc/header.php");
 include ("listsp.php");
+?>
