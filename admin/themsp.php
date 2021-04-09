@@ -20,7 +20,8 @@
  		 if (empty($image)){
  		 	echo "false";
  		 }else{
- 		 	move_uploaded_file($image,'image/');
+ 		 	if(move_uploaded_file($image,'image/')){
+				echo 'done';
  		 }
  	}
 
