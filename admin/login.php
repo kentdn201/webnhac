@@ -33,12 +33,6 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-	<style>
-		body{
-			background: url('images/anhlogin.jpg');
-			background-size: cover;
-		}
-	</style>
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-xs-12 col-md-8 col-sm-8 row-container">
