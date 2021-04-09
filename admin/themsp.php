@@ -1,26 +1,46 @@
-<?php
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-	$tensp = $_POST['tensp'];
-	$file = $_POST['file'];
-	$anhsp = $_POST['anhsp'];
-	$giasp = $_POST['giasp'];
-	include("../inc/conn.php");
-	$sql = "INSERT INTO product(product_name, product_file, product_price, product_images) VALUES ('$tensp', '$file', '$giasp', '$anhsp')";
-	if(mysqli_query($conn, $sql)){
-		echo "Add successfuly <br>";
-	}else{
-		echo"error: " . mysqli_error($conn);
-	}
-}
-include ("inc/header.php");
-?>
-<form class="form" method="post">
-	<input type="text" name="tensp" placeholder="enter name of song" style="width: 80%; height: 5%;">
-	<input type="number" name="giasp" placeholder="enter price of song" style="width: 80%; height: 5%; float: left;">
-	<label >Choose image of song</label>
-	<input type="file" name="anhsp" style="width: 40%; height: 5%">
-	<label>Choose file of song</label>
-	<input type="file" name="file" style="width: 40%; height: 5%">
-	<br><br>
-	<input type="submit" name="submit" value="Add" style="width: 40%; height: 5%">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add product</title>
+</head>
+<body>
+	<?php
+ 	include('../inc/conn.php'); 
+ 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+ 		 $name = $_PORT['name'];
+ 		 $price = $_PORT['price'];
+ 		 $type = $_PORT['type'];
+ 		 $getdate = $_PORT['date'];
+ 		 $image = $_PORT['image'];
+
+ 		 $sql = "INSERT INTO product(getdate,image,name,price,type,description) VALUES ('$getdate','$image','$name',$price,'$type','$description')";
+ 		 $rs = pg_query($conn, $sql);
+ 		 var_dump($rs);
+
+ 		 if (empty($image)){
+ 		 	echo "false";
+ 		 }else{
+ 		 	move_uploaded_file($image,'image/');
+ 		 }
+ 	}
+
+
+
+	 ?>
+<form method="POST">
+	<div>
+		<label>Name</label>
+		<input type="text" name="name">
+		<label>price</label>
+		<input type="number" name="price">
+		<label>type</label>
+		<input type="text" name="type">
+		<label>getdate</label>
+		<input type="text" name="date">
+		<label>image</label>
+		<input type="file" name="image">
+		<input type="submit" name="login">
+	</div>
 </form>
+</body>
+</html>
