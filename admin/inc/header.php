@@ -1,8 +1,8 @@
 <link rel="stylesheet" type="text/css" href="/test3/font-awesome-4.7.0/css/font-awesome.css">
 <?php
      session_start();
-     if( !empty($_SESSION['user'])){
-     	echo "hello: " . $_SESSION['user'];
+     if( !empty($_SESSION['username'])){
+     	echo "hello: " . $_SESSION['username'];
      }else{
      	header('Location:login.php');
      	die;
