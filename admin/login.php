@@ -2,10 +2,10 @@
 <?php
  session_start();
  if( $_SERVER['REQUEST_METHOD'] == 'POST') {
- 	include('../inc/conn.php');
- 	$username = $_POST['name'];
- 	$password = $_POST['pass'];
- 	$user = mysqli_fetch_assoc( mysqli_query( $conn , "SELECT * FROM user_1 WHERE user_name='{$username}' AND password='{$password}'"));
+ 	include('/inc/conn.php');
+ 	$username = $_POST['username'];
+ 	$password = $_POST['password'];
+ 	$user = mysqli_fetch_assoc( mysqli_query( $conn , "SELECT * FROM account WHERE username ='$username' and password='$password'"));
  	if($user){
  		$_SESSION['user'] = $user['user_name'];
  		header('location:index.php');
