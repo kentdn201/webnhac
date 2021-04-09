@@ -11,7 +11,7 @@
  		 $price = $_PORT['price'];
  		 $type = $_PORT['type'];
  		 $getdate = $_PORT['date'];
- 		 $image = $_PORT['image'];
+ 		 $image = $_FILES['image'];
 
  		 $sql = "INSERT INTO product(getdate,image,name,price,type,description) VALUES ('$getdate','$image','$name',$price,'$type','$description')";
  		 $rs = pg_query($conn, $sql);
