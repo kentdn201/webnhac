@@ -52,7 +52,7 @@
            	 $getdate = $_POST['getdate'];
           	 $image = $_FILES['image'];
 		 $imagename = $image['name'];
-		 move_uploaded_file($image['tmp_name'],'/image/$imagename'); 
+		 move_uploaded_file($image['tmp_name'],'../image/$imagename'); 
 		     var_dump($imagename);
 		 
 		   
