@@ -1,12 +1,25 @@
 <?php 
 include("inc/conn.php");
- if($_SERVER['REQUEST_METHOD']=='POST'){
- 	$id=$_GET['id'];
-	$name=$_POST['tensong'];
-	$price=$_POST['songprice'];
-	$img=$_POST['songimg'];
-	$mp3=$_POST['songmp3'];
-$sql="UPDATE product SET product_id=$id,product_name='$name',product_price='$price',product_file='$mp3',product_images='$img' WHERE product_id=$id ";
+ $id = $_GET['id'];
+	           	$name = $_POST['name'];
+	            	$description = $_POST['description'];
+	            	$type = $_POST['type'];
+	            	$khuvuc = $_POST['khuvuc'];
+	            	$price = $_POST['price'];
+	            	$file = $_FILES['anhsp'];
+            		$song = $_FILES['song'];
+				if( !empty( $file))
+				{
+					$tenfile = rand() . $file['name'];
+					if( move_uploaded_file($file['tmp_name'], "../images/" .$tenfile)){
+						echo "success";
+					}
+					else
+					{
+						echo "Error";
+					}
+				}
+$sql = "UPDATE product SET name=?, description=?, type=?, price=? WHERE id=?";
 if(mysqli_query($conn,$sql)){
 	echo "successfully updated";
 }else{
@@ -14,20 +27,54 @@ if(mysqli_query($conn,$sql)){
 }
 }
 $id=$_GET['id'];
-$sql= mysqli_query($conn,"SELECT * FROM product WHERE product_id={$id}");
+$sql = mysqli_query( $conn, "SELECT * FROM music WHERE id={$id}");
 $product = mysqli_fetch_assoc($sql);
 ?>
  <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<link rel="icon" href="https://img.icons8.com/fluent/96/000000/data-configuration.png"/>
-	<link rel="stylesheet" type="text/css" href="aset/admin.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Management system </title>
-</head>
-<body>
+<html lang="en">
+  <head>
+  	<title>Admin Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+		
+		  <?php
+      include("inc/header.php");
+      require_once("inc/conn.php");
+      ?>
+      <style>
+        .add-song{
+              border: 2px solid black;
+              padding-left: 5px;
+              color: black;
+        }
+        .form input{
+          width:100%;
+          display: inline-block;
+          float:none;
+          padding:10px;
+        }
+
+        .form label{
+          width:100%;
+          display: inline-block;
+        }
+
+        .form textarea{
+          width:100%;
+          display: inline-block;
+          padding:10px;
+        }
+      </style>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
 <div >
 <div>
 <h3>Update Song Name : <?= $product['product_name']?></h3>
@@ -35,16 +82,35 @@ $product = mysqli_fetch_assoc($sql);
 <?php
 include("inc/header.php");
 ?>
-<form method="POST" class="form" >
-	<label>Enter song name</label> <br>
-	<input class="us-pw" type="text" name="tensong" value="<?=$product['product_name']?>"/> <br>
-<label>Enter song price </label> <br>
-<input type="number" name="songprice" value="<?=$product['SongPrice']?>" class="us-pw"> <br>
-<label>Choose song image</label> <br>
-<img class="anhsp" src="../images/<?=$product['product_images']?>"/ class="us-pw"  style="width: 80%; height: 5%; float: left;"> <br> <br>
-<input type="file" name="songimg"> <br> <br>
-<label>Choose song file</label> <br>
-<input type="file" name="songmp3"> <br> <br>
-<input type="submit" name="submit" value="Update" class="login">
-</form>
+<form class="form add-song" method="post" enctype="multipart/form-data">
+			
+			<label>Input Name of the song</label>
+			<input type="text" name="name" value="<?= $product['name']?>">
+
+			<label>Input Lyric</label>
+			<textarea name="lyric"><?= $product['lyric']?></textarea>
+
+			<label>Input singer</label>
+			<input type="text" name="casi" value="<?= $product['casi']?>">
+
+			<label>Input location</label>
+			<input type="text" name="khuvuc" value="<?= $product['location']?>">
+			
+			<label>Input price</label>
+			<input type="number" name="price" value="<?= $product['price']?>">
+
+			<label>Choose Image</label>
+			<img style="width: 150px;" class="anhsp" src="../images/<?= $product['anh']?>">
+			<input type="file" name="anhsp">
+			<label>Choose Song</label>
+				<audio id='audio_1' controls preload loop>
+			 		<source src='../music/<?= $product['file']?>'/>
+			 	</audio>
+			<input type="file" name="song">
+			<input type="submit" name="submit" class="btn btn-danger btn-block" value="Update">
+		</form>
+		 <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </div>
