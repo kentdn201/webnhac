@@ -15,8 +15,7 @@
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 	          <a class="dropdown-item" href="lego.php">Lego</a>
-	          <a class="dropdown-item" href="baby.php">For baby</a>
-	          <a class="dropdown-item" href="teen.php">For teen</a>
+	          <a class="dropdown-item" href="toy.php">Toy</a>
 	        </div>
 	      </li>
 	    </ul>
