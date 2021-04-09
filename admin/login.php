@@ -42,7 +42,7 @@ session_start();
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-xs-12 col-md-8 col-sm-8 row-container">
-			<form method="POST" action="index.php">
+			<form method="post">
 				<h2 style="text-align: center;">Login</h2>
 				<div class="form-group">
 					<label for="username">Username:</label>
