@@ -58,7 +58,7 @@ session_start();
 								</div>
 								<div class="group">
 									<input id="check" type="checkbox" class="check" checked>
-									<label for="check"><span class="icon"></span> Keep me Signed in</label>
+									<label for="check"><span class="icon"></span> Keep me Login</label>
 								</div>
 								<div class="group">
 									<input type="submit" class="button" value="Login">
