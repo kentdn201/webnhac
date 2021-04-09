@@ -33,34 +33,26 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
+	<style>
+		body{
+			background: url('images/anhlogin.jpg');
+			background-size: cover;
+		}
+	</style>
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-xs-12 col-md-8 col-sm-8 row-container">
-			<form method="post">
-				<div class="login-wrap">
-					<div class="login-html">
-						<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
-						<div class="login-form">
-							<div class="sign-in-htm">
-								<div class="group">
-									<label for="user" class="label">Username</label>
-									<input id="user" type="text" class="input" name="username">
-								</div>
-								<div class="group">
-									<label for="pass" class="label">Password</label>
-									<input id="pass" type="password" class="input" data-type="password" name="password">
-								</div>
-								<div class="group">
-									<input id="check" type="checkbox" class="check" checked>
-									<label for="check"><span class="icon"></span> Keep me Login</label>
-								</div>
-								<div class="group">
-									<input type="submit" class="button" value="Login">
-								</div>
-							</div>
-						</div>
-					</div>
+			<form method="POST" action="index.php">
+				<h2 style="text-align: center;">Login</h2>
+				<div class="form-group">
+					<label for="username">Username:</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter Usename Here" name="username" required>
 				</div>
+				<div class="form-group">
+					<label for="password">Password:</label>
+					<input type="password" class="form-control" id="pass" placeholder="Enter Password Here" name="username" required>
+				</div>
+				<button type="submit" class="btn btn-danger btn-block">Submit</button>
 			</form>
 		</div>
 	</div>
