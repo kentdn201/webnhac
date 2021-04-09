@@ -43,12 +43,30 @@ session_start();
 	<div class="row justify-content-center">
 		<div class="col-xs-12 col-md-8 col-sm-8 row-container">
 			<form method="post">
-				<h2 style="text-align: center;">Login</h2>
-				<label>username</label>
-				<input type="text" name="username">
-				<label>password</label>
-				<input type="password" name="password">
-				<button name="login" type="submit" value="login">Login</button>
+				<div class="login-wrap">
+					<div class="login-html">
+						<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+						<div class="login-form">
+							<div class="sign-in-htm">
+								<div class="group">
+									<label for="user" class="label">Username</label>
+									<input id="user" type="text" class="input" name="username">
+								</div>
+								<div class="group">
+									<label for="pass" class="label">Password</label>
+									<input id="pass" type="password" class="input" data-type="password" name="password">
+								</div>
+								<div class="group">
+									<input id="check" type="checkbox" class="check" checked>
+									<label for="check"><span class="icon"></span> Keep me Signed in</label>
+								</div>
+								<div class="group">
+									<input type="submit" class="button" value="Login">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>
