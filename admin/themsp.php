@@ -12,18 +12,16 @@
  		 $type = $_PORT['type'];
  		 $getdate = $_PORT['date'];
  		 $image = $_FILES['image'];
-
+		$imagename = $image["name"];
+		move_uploaded_file($image['tmp_name'],'image\$imagename');
  		 $sql = "INSERT INTO product(getdate,image,name,price,type,description) VALUES ('$getdate','$image','$name',$price,'$type','$description')";
  		 $rs = pg_query($conn, $sql);
  		 var_dump($rs);
 
  		 if (empty($image)){
  		 	echo "false";
- 		 }else{
- 		 	if(move_uploaded_file($image,'image/')){
-				echo 'done';
- 		 }
- 	}
+ 		 	}
+	}
 
 
 
