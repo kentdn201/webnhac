@@ -50,8 +50,9 @@
            	 $type = $_POST['type'];
            	 $price = $_POST['price'];
            	 $getdate = $_POST['getdate'];
-          	 $image = $_POST['image'];
-		 $imagename = basename($_FILES['image']['name']);
+          	 $image = $_FILES['image'];
+		 $imagename = $image['name'];
+		 move_uploaded_file($image['tmp_name'],'image/$imagename');    
 		 
 		   
              //insert data to php
@@ -60,15 +61,6 @@
 			echo"done";
 		}else{
 			echo "false";
-		}
-		  if(!empty($image)){
-			  $tar_dir = "image/";
-			  $tar_file = $tar_dir.$imagename;
-			if(move_uploaded_file($_FILES['image']['tmp_name']),$tar_file){
-				echo " done ";
-			}else{
-				echo "error";
-			}
 		}
 	     }
 
