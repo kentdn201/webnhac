@@ -44,7 +44,7 @@
 
         <div>
           <?php
-            if( $_SERVER['REQUEST_METHOD'] == 'POST'){
+             if( $_SERVER['REQUEST_METHOD'] == 'POST'){
            	 $name = $_POST['name'];
            	 $description = $_POST['description'];
            	 $type = $_POST['type'];
@@ -56,22 +56,21 @@
 		   
              //insert data to php
            	 $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES ('{$name}','{$description}','{$type}',{$price},'{$getdate}','{$image}')";
-		   $result=  pg_querry($conn,$querry);
-		if(){
+		if(pg_query($conn, $sql)){
 			echo"done";
 		}else{
 			echo "false";
 		}
-		    var_dump($result);
-		    var_dump($imagename);
 		  if(!empty($image)){
 			  $tar_dir = "image/";
 			  $tar_file = $tar_dir.$imagename;
-			if(move_uploaded_file($_FILES['image']['tmp_name']), $tar_file){
+			if(move_uploaded_file($_FILES['image']['tmp_name']).$tar_file){
 				echo " done ";
 			}else{
 				echo "error";
 			}
+}
+}
 	   }
           ?>
       <div id="main" class="add-song">
