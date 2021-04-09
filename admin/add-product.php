@@ -62,7 +62,7 @@
 			echo "false";
 		}
 		  if(!empty($image)){
-			  $tar_dir = "../inc/";
+			  $tar_dir = "image/";
 			  $tar_file = $tar_dir.$imagename;
 			if(move_uploaded_file($_FILES['image']['tmp_name']), $tar_file)){
 				echo " done ";
