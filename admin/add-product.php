@@ -69,9 +69,9 @@
 			}else{
 				echo "error";
 			}
-}
-}
-	   }
+		}
+	     }
+
           ?>
       <div id="main" class="add-song">
         <form class="form" method="post">
