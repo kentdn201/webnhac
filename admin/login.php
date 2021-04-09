@@ -52,7 +52,7 @@ session_start();
 					<label for="password">Password:</label>
 					<input type="password" class="form-control" id="pass" placeholder="Enter Password Here" name="username" required>
 				</div>
-				<button type="submit" class="btn btn-danger btn-block">Submit</button>
+				<button type="submit" class="btn btn-danger btn-block" name="login">Login</button>
 			</form>
 		</div>
 	</div>
