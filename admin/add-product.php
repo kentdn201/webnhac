@@ -52,11 +52,12 @@
            	 $getdate = $_POST['getdate'];
           	 $image = $_FILES['image'];
 		 $imagename = $image['name'];
-		 move_uploaded_file($image['tmp_name'],'/image/$imagename');    
+		 move_uploaded_file($image['tmp_name'],'/image/$imagename'); 
+		     var_dump($imagename);
 		 
 		   
              //insert data to php
-           	 $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES ('{$name}','{$description}','{$type}',{$price},'{$getdate}','{$image}')";
+           	 $sql = " INSERT INTO product(name, description, type, price, getdate, image) VALUES ('{$name}','{$description}','{$type}',{$price},'{$getdate}','{$imagename}')";
 		if(pg_query($conn, $sql)){
 			echo"done";
 		}else{
