@@ -17,16 +17,16 @@
 			require_once("inc/conn.php");
 			include("inc/header.php");
 
-		      $sql = "SELECT * FROM music WHERE location='K-POP'";
-		      $rs = mysqli_query($conn, $sql);
+		      $sql = "SELECT * FROM product WHERE type='Lego'";
+		      $rs = pg_query($conn, $sql);
 
-		      if(mysqli_num_rows($rs) > 0 ){
-		        while( $row = mysqli_fetch_assoc($rs) ){
+		      if(pg_num_rows($rs) > 0 ){
+		        while( $row = pg_fetch_assoc($rs) ){
 		      ?>
-		        <a href="single-product.php?id=<?php echo $row['id']?>" class="product">
-		            <div class="product-image"><img src="images/<?php echo $row['anh'] ?>" /></div>
+		        <a href="single-product.php?id=<?php echo $row['productid']?>" class="product">
+		            <div class="product-image"><img src="images/<?php echo $row['image'] ?>" /></div>
 		            <h2 class="product-title"><?php echo $row['name'] ?></h2>
-		            <p><?php echo $row['casi']?></p>
+		            <p><?php echo $row['type']?></p>
  				</a>
 		    <?php 
 
