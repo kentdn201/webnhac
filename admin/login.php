@@ -46,11 +46,11 @@ session_start();
 				<h2 style="text-align: center;">Login</h2>
 				<div class="form-group">
 					<label>Username:</label>
-					<input type="text" class="form-control" id="name" placeholder="Enter Usename Here" name="username" required>
+					<input type="text" class="form-control" placeholder="Enter Usename Here" name="username">
 				</div>
 				<div class="form-group">
 					<label>Password:</label>
-					<input type="password" class="form-control" id="pass" placeholder="Enter Password Here" name="username" required>
+					<input type="password" class="form-control" placeholder="Enter Password Here" name="username">
 				</div>
 				<button type="submit" class="btn btn-danger btn-block" name="login">Login</button>
 			</form>
