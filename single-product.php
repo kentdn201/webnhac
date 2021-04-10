@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="./"><img src="image/logo.jpg"></a></h1>
+                        <h1><a href="index.php"><img src="image/logo.png"></a></h1>
                     </div>
                 </div>
                 
@@ -153,7 +153,7 @@
 
                                 $sql = "SELECT * FROM product WHERE productid = {$id}";
                                 $rs = pg_query($conn, $sql);
-                                while ( $row = pg_fetch_assoc($rs) ){   
+                                while($row = pg_fetch_assoc($rs) ){   
                             ?>
                             <div class="col-sm-6">
                                 <div class="product-images">
