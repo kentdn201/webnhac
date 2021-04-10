@@ -151,9 +151,9 @@
                             <?php
                                 $id = $_GET['id'];
 
-                                $sql = "SELECT * FROM music WHERE id = {$id}";
+                                $sql = "SELECT * FROM product WHERE productid = {$id}";
                                 $rs = pg_query($conn, $sql);
-                                while ( $row = mysqli_fetch_assoc($rs) ){   
+                                while ( $row = pg_fetch_assoc($rs) ){   
                             ?>
                             <div class="col-sm-6">
                                 <div class="product-images">
