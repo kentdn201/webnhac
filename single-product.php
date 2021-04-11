@@ -99,21 +99,21 @@
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Products</h2>
                         <div class="thubmnail-recent">
-                            <img "images/<?php echo $row['image']?> class="recent-thumb" alt="">
+                            <img src="images/<?php echo $row['image']?>"> class="recent-thumb" alt="">
                             <h2><a href="">Sony Smart TV - 2015</a></h2>
                             <div class="product-sidebar-price">
                                 <ins>$700.00</ins> <del>$100.00</del>
                             </div>                             
                         </div>
                         <div class="thubmnail-recent">
-                            <img "images/<?php echo $row['image']?> class="recent-thumb" alt="">
+                            <img src="images/<?php echo $row['image']?>"> class="recent-thumb" alt="">
                             <h2><a href="">Sony Smart TV - 2015</a></h2>
                             <div class="product-sidebar-price">
                                 <ins>$700.00</ins> <del>$100.00</del>
                             </div>                             
                         </div>
                         <div class="thubmnail-recent">
-                            <img "images/<?php echo $row['image']?> class="recent-thumb" alt="">
+                            <img src="images/<?php echo $row['image']?>"> class="recent-thumb" alt="">
                             <h2><a href="">Sony Smart TV - 2015</a></h2>
                             <div class="product-sidebar-price">
                                 <ins>$700.00</ins> <del>$100.00</del>
@@ -158,13 +158,13 @@
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img "images/<?php echo $row['image']?>
+                                        <img src="images/<?php echo $row['image']?>">
                                     </div>
                                     
                                     <div class="product-gallery">
-                                        <!---<img "images/<?php echo $row['image']?>
-                                        <img "images/<?php echo $row['image']?>
-                                        <img "images/<?php echo $row['image']?>--->
+                                        <img src="images/<?php echo $row['image']?>">
+                                        <img src="images/<?php echo $row['image']?>">
+                                        <img src="images/<?php echo $row['image']?>">
                                     </div>
                                 </div>
                             </div>
