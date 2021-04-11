@@ -59,9 +59,9 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop page</a></li>
-                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="shop.php">Shop page</a></li>
+                        <li><a href="cart.php">Cart</a></li>
                         <li><a href="checkout.html">Checkout</a></li>
                     </ul>
                 </div>  
