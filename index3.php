@@ -8,7 +8,7 @@
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
         <!-- Custom CSS -->
-        <link rel = "stylesheet" href = "main.css">
+        <link rel = "stylesheet" href = "css/main.css">
         <!-- Slick CSS files -->
         <link rel = "stylesheet" href = "slick-1.8.1/slick/slick.css">
         <link rel = "stylesheet" href = "slick-1.8.1/slick/slick-theme.css">
