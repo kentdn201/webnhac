@@ -111,7 +111,7 @@
                             </div>                             
                         </div>
                         <div class="thubmnail-recent">
-                            <img "images/<?php echo $row['image']?>" class="recent-thumb">
+                            <img src="images/<?php echo $row['image']?>" class="recent-thumb">
                             <h2><a href="">Sony Smart TV - 2015</a></h2>
                             <div class="product-sidebar-price">
                                 <ins>$700.00</ins> <del>$100.00</del>
