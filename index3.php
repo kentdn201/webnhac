@@ -107,29 +107,7 @@
     
     <div class="slider-area">
         	<!-- Slider -->
-			<div class="block-slider block-slider4">
-				<ul class="" id="bxslider-home4">
-			<?php include('/inc/conn.php');
-            $sql = 'SELECT * FROM Products limit 4';
-            $rs = pg_querry($conn, $sql);
-            while ($row = pg_fetch_assoc($rs)) {
-                ?>
-                    <li>
-                        <img src="image/<?= $row['image']; ?>" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                 <span class="primary"> <?php $row['name']; ?></span>
-                            </h2>
-                            <h4 class="caption subtitle"><?php $row['price']; ?></h4>
-                            <a class="caption button-radius" href=""><span class="icon"></span>Shop now</a>
-                        </div>
-                    </li>
-                <?php
-            }
-            ?>
-				</ul>
-			</div>
-			<!-- ./Slider -->
+		<!-- ./Slider -->
     </div> <!-- End slider area -->
     
     <div class="promo-area">
