@@ -69,8 +69,8 @@
                     <div class = "product">
                         <div style="col-xs-4">
                             <a href="single-product.php?id=<?php echo $row['productid']?>">
-                                <div class="product-img"><img src="images/<?php echo $row['image']?>"></div>
-                                <div class="product-name"><h2><?php echo $row['name']?></h2></div>
+                                <div class="product-image"><img src="images/<?php echo $row['image']?>"></div>
+                                <div class="product-title"><h2><?php echo $row['name']?></h2></div>
                                 <div><?php echo $row['type']?></p></div>
                                 <div class="product-price"><p><?php echo $row['price']?></p></div>
                             </a>
