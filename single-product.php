@@ -162,9 +162,9 @@
                                     </div>
                                     
                                     <div class="product-gallery">
+                                        <!---<img "images/<?php echo $row['image']?>
                                         <img "images/<?php echo $row['image']?>
-                                        <img "images/<?php echo $row['image']?>
-                                        <img "images/<?php echo $row['image']?>
+                                        <img "images/<?php echo $row['image']?>--->
                                     </div>
                                 </div>
                             </div>
