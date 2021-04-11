@@ -46,6 +46,7 @@
 		  </a>
 		</div>
 		<br>
+		<div class="maincontent-area">
 		<div class="col-xs-12 col-sm-8 col-md-12">
 		<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;">Best sales</h2>
 		<?php
