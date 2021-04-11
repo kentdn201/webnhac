@@ -81,7 +81,12 @@
                             <input type="submit" value="Search">
                         </form>
                     </div>
-                    
+                    <?php
+                        $id = $_GET['id'];
+                        $sql = "SELECT * FROM product WHERE productid = {$id}";
+                        $rs = pg_query($conn, $sql);
+                        while($row = pg_fetch_assoc($rs) ){   
+                    ?>
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Products</h2>
                         <div class="thubmnail-recent">
@@ -134,13 +139,6 @@
                             <a href="">Sony Smart TV - 2015</a>
                         </div>
                         <div class="row">
-                            <?php
-                                $id = $_GET['id'];
-
-                                $sql = "SELECT * FROM product WHERE productid = {$id}";
-                                $rs = pg_query($conn, $sql);
-                                while($row = pg_fetch_assoc($rs) ){   
-                            ?>
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
