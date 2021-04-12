@@ -47,7 +47,7 @@
 	<div class="container">
 		<div class="col-xs-12 col-sm-8 col-md-12">
 			<?php
-		      	$sql = "SELECT * FROM product";
+		      	$sql = "SELECT * FROM product LIMIT 4";
 		      	$rs = pg_query($conn, $sql);
 		      if(pg_num_rows($rs) > 0 ){
 		        while( $row = pg_fetch_assoc($rs) ){
