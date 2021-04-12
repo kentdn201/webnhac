@@ -47,18 +47,7 @@
 	<div class="container">
 		<div class="col-xs-12 col-sm-8 col-md-12">
 			<?php
-		      	if(!empty($_GET['page']))
-		        {
-		          $page=$_GET['page']-1;
-		        }
-		        else
-		        {
-		          $page =0;
-		        }
-    			$page = !empty($_GET['page']) ? ($_GET['page'] - 1): 0 ; //lay page hien tai
-      			$product_per_page = 4; //1 trang 3 sp 
-      			$offset = $product_per_page * $page; //offset chinh la phan can bo qua 
-		      	$sql = "SELECT * FROM product LIMIT $offset,$product_per_page ";
+		      	$sql = "SELECT * FROM product";
 		      	$rs = pg_query($conn, $sql);
 		      if(pg_num_rows($rs) > 0 ){
 		        while( $row = pg_fetch_assoc($rs) ){
