@@ -46,9 +46,19 @@
 	<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Best sales</h2>
 	<div class="container">
 		<div class="col-xs-12 col-sm-8 col-md-12">
-			<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;">Best sales</h2>
 			<?php
-		      	$sql = "SELECT * FROM product";
+		      	if(!empty($_GET['page']))
+		        {
+		          $page=$_GET['page']-1;
+		        }
+		        else
+		        {
+		          $page =0;
+		        }
+    			$page = !empty($_GET['page']) ? ($_GET['page'] - 1): 0 ; //lay page hien tai
+      			$product_per_page = 4; //1 trang 3 sp 
+      			$offset = $product_per_page * $page; //offset chinh la phan can bo qua 
+		      	$sql = "SELECT * FROM product LIMIT $offset,$product_per_page ";
 		      	$rs = pg_query($conn, $sql);
 		      if(pg_num_rows($rs) > 0 ){
 		        while( $row = pg_fetch_assoc($rs) ){
