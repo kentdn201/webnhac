@@ -39,3 +39,11 @@
 	color: white;
 	font-size: 23px;
 }
+.footer{
+	background-color: black;
+	color: white;
+	font-size: 23px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
