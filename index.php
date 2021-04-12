@@ -42,10 +42,10 @@
 		    <span class="sr-only">Next</span>
 		  </a>
 		</div>
-    </div>
-	<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Best sales</h2>
+   	</div>
 	<div class="container">
 		<div class="col-xs-12 col-sm-8 col-md-12">
+			<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Best sales</h2>
 			<?php
 		      	$sql = "SELECT * FROM product LIMIT 4";
 		      	$rs = pg_query($conn, $sql);
