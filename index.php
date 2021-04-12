@@ -71,5 +71,8 @@
 			</div>
 		</div>
 	</div>
+	<div class="footer">
+		<h2> Demo </h2>
+	</div>
 </body>
 </html>
