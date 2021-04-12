@@ -50,7 +50,6 @@
 			<?php
 		      	$sql = "SELECT * FROM product";
 		      	$rs = pg_query($conn, $sql);
-				va
 		      if(pg_num_rows($rs) > 0 ){
 		        while( $row = pg_fetch_assoc($rs) ){
 		      ?>
