@@ -82,20 +82,22 @@
 			<h3 style="display: none;"></h3>
 </div>
 <div class="container">
-	<div class="col-xs-12 col-sm-8 col-md-12">
-		<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Lego</h2>
-		<div>
+	<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Lego</h2>
+		<div class="row">
+			
 				<?php
 					$sql = "SELECT * FROM product WHERE type LIKE 'Lego' LIMIT 4";
 					$rs = pg_query($conn, $sql);
 				      if(pg_num_rows($rs) > 0 ){
 					while( $row = pg_fetch_assoc($rs) ){
-				 ?>
+				 ?>		
+				<div class ="col-sm-3">
 					<a href="single-product.php?id=<?php echo $row['productid']?>" class="product">
 						<div class="product-image"><img src="images/<?php echo $row['image']?>"></div>
 						<h2 class="product-title"><?php echo $row['name']?></h2>
 						<p><?php echo $row['type']?></p>
 						<p><?php echo $row['price']?></p>
+				</div>
 					</a>
 					      <?php 
 
@@ -104,7 +106,8 @@
 						    }//check so hang tra ve > 0 
 
 					   	?>
-			</div>
+			
+		</div>
 		</div>
 	</div>
 <div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
