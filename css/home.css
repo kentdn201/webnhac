@@ -34,8 +34,13 @@
 	color: white;
 	font-size: 23px;
 }
+.footer-web{
+	background-color: black;
+	color: white;
+	font-size: 23px;
+}
 .footer-dark {
-  padding:50px auto;
+  padding:50px 0;
   color:#f0f9ff;
   background-color:#282d32;
 }
