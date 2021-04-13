@@ -80,8 +80,8 @@
 <div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
 			<h3 style="display: none;"></h3>
 	</div>
-    <div class="footer-dark">
-        <footer>
+<footer>
+	<div class="footer-dark">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
@@ -108,8 +108,8 @@
                 </div>
                 <p class="copyright">Company Name © 2018</p>
             </div>
-        </footer>
-    </div>
+	</div>
+  </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
