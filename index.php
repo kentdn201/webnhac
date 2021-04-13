@@ -81,7 +81,7 @@
 			<h3 style="display: none;"></h3>
 	</div>
 <footer id="sticky-footer">
-	<div class="footer">
+	<div class="footer-dark">
 		<div class="text-center footer">
 			<div class="container">
 				<div class="row">
