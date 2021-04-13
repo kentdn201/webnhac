@@ -39,12 +39,3 @@
 	color: white;
 	font-size: 23px;
 }
-.footer{
-	background-color: black;
-	color: white;
-	font-size: 23px;
-	bottom: 0;
-}
-.main{
-	min-height: calc(100vh - 211px - 58px)
-}
