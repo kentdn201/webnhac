@@ -80,9 +80,9 @@
 <div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
 			<h3 style="display: none;"></h3>
 	</div>
-<footer id="sticky-footer">
+<footer>
 	<div class="footer-dark">
-		<div class="text-center footer">
+		<div>
 			<div class="container">
 				<div class="row">
                     			<div class="col-sm-6 col-md-3 item">
