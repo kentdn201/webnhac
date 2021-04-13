@@ -82,7 +82,8 @@
 			<h3 style="display: none;"></h3>
 </div>
 <div class="container">
-	<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Lego</h2>
+	<div class="col-xs-12 col-sm-8 col-md-12">
+		<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Lego</h2>
 		<div>
 				<?php
 					$sql = "SELECT * FROM product WHERE type LIKE 'Lego' LIMIT 4";
@@ -103,6 +104,7 @@
 						    }//check so hang tra ve > 0 
 
 					   	?>
+			</div>
 		</div>
 	</div>
 <div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
