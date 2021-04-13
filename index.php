@@ -77,8 +77,13 @@
 		</div>
 	</div>
 </main>
-	<footer>
-		<h2> Demo </h2>
-	</footer>
+<div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
+			<h3 style="display: none;"></h3>
+	</div>
+<footer id="sticky-footer" class="py-3 bg-dark text-white-50 container">
+    <div class="text-center">
+      <small>Get toy to everyone</small>
+    </div>
+  </footer>
 </body>
 </html>
