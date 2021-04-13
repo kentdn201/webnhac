@@ -31,9 +31,11 @@
 
   </head>
   <body>
-    <?php
-	include("inc/header.php");  
+	<div class="container">
+	<?php
+		include("inc/header.php");  
 	?>
+	</div>
     <!-- End mainmenu area -->
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
@@ -137,8 +139,6 @@
             </div>
         </div>
     </div>
-	  <div><h1></h1></div>
-
     <div class="footer-top-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
