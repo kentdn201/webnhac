@@ -81,6 +81,7 @@
 <div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
 			<h3 style="display: none;"></h3>
 	</div>
+<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Best sales</h2>
 <footer>
 	<div class="footer-dark">
             <div class="container">
