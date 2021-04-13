@@ -31,7 +31,7 @@
 
 		$sql = "SELECT * FROM product WHERE productid = {$id}";
 		$rs = pg_query($conn, $sql);
-		while ( $row = mysqli_fetch_assoc($rs) ){
+		while ( $row = pg_fetch_assoc($rs) ){
               ?>
         <div class = "product-imgs">
           <div class = "img-display">
