@@ -85,7 +85,7 @@
 	<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Best toys</h2>
 		<div>
 				<?php
-					$sql = "SELECT * FROM product LIMIT 4";
+					$sql = "SELECT * FROM product WHERE type LIKE 'Lego' LIMIT 4";
 					$rs = pg_query($conn, $sql);
 				      if(pg_num_rows($rs) > 0 ){
 					while( $row = pg_fetch_assoc($rs) ){
