@@ -20,6 +20,9 @@
 	include("inc/header.php")
 ?>
 </div>
+	<div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
+			<h3 style="display: none;"></h3>
+	</div>
 <div class = "card-wrapper">
       <div class = "card">
         <!-- card left -->
@@ -115,7 +118,9 @@
         </div>
       </div>
     </div>
-	
+	<div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
+			<h3 style="display: none;"></h3>
+	</div>
 <footer>
 	<div class="footer-dark">
             <div class="container">
