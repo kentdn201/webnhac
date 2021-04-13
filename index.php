@@ -47,12 +47,7 @@
 				</div>
 			</div>
    		</div>
-<?php
-		$sql = "SELECT * FROM product LIMIT 4";
-		$rs = pg_query($conn, $sql);
-		if(pg_num_rows($rs) > 0 ){
-		while( $row = pg_fetch_assoc($rs) ){
-?>
+<main>
 	<div class="products">
 		<div class="container">
 			<div class="col-xs-12 col-sm-8 col-md-12">
@@ -81,6 +76,7 @@
 			</div>
 		</div>
 	</div>
+</main>
 <div class="hot-singer container col-xs-12 col-xs-12 navbar" style="background-color:white;">
 			<h3 style="display: none;"></h3>
 	</div>
