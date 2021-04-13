@@ -19,6 +19,7 @@
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -49,37 +50,12 @@
                         while($row = pg_fetch_assoc($rs) ){   
                     ?>
                     <div class="single-sidebar">
-                        <h2 class="sidebar-title">Products</h2>
-                        <div class="thubmnail-recent">
-                            <img src="images/<?php echo $row['image']?>" class="recent-thumb">
-                            <h2><a href="">Sony Smart TV - 2015</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$100.00</del>
-                            </div>                             
-                        </div>
-                        <div class="thubmnail-recent">
-                            <img src="images/<?php echo $row['image']?>" class="recent-thumb">
-                            <h2><a href="">Sony Smart TV - 2015</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$100.00</del>
-                            </div>                             
-                        </div>
-                        <div class="thubmnail-recent">
-                            <img src="images/<?php echo $row['image']?>" class="recent-thumb">
-                            <h2><a href="">Sony Smart TV - 2015</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$100.00</del>
-                            </div>                             
-                        </div>
-                        <div class="thubmnail-recent">
-                            <img src="images/<?php echo $row['image']?>" class="recent-thumb">
-                            <h2><a href="">Sony Smart TV - 2015</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>$700.00</ins> <del>$100.00</del>
-                            </div>                             
-                        </div>
+                        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:8%">
+			  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+			  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+			  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+			</div>
                     </div>
-                </div>
                 
                 <div class="col-md-8">
                     <div class="product-content-right">
