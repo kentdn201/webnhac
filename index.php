@@ -82,7 +82,7 @@
 			<h3 style="display: none;"></h3>
 </div>
 <div class="container">
-	<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Best toys</h2>
+	<h2 style="background-color: black; font-size: 23px; color: white; padding: 10px;" class="container">Lego</h2>
 		<div>
 				<?php
 					$sql = "SELECT * FROM product WHERE type LIKE 'Lego' LIMIT 4";
