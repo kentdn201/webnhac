@@ -23,7 +23,7 @@
 				<?php 
 					$id = $_GET['id'];
 
-					$sql = "SELECT * FROM music WHERE id = {$id}";
+					$sql = "SELECT * FROM proeduct WHERE id = {$id}";
 					$rs = mysqli_query($conn, $sql);
 
 					while ( $row = mysqli_fetch_assoc($rs) ){
