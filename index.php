@@ -84,7 +84,7 @@
 	<div class="footer-dark">
 		<div>
 			<div class="container">
-				<div class="row">
+				<div>
                     			<div class="col-sm-6 col-md-3 item">
 						<h3>Services</h3>
 						<ul>
