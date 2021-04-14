@@ -10,11 +10,11 @@ session_start();
 	$result = pg_query($conn, $sql);
 	$check = pg_num_rows($result);
 	if($check == 1){
-		echo "Vao dc roi";
+		session_start();
+		$_SESSION['current'] = rand(1,100);
 		header("Location:index.php");
-	}
-	else{
-		echo "Vao lai di";
+	}else{
+		echo" please try again";
 	}
  }
 		
