@@ -1,52 +1,20 @@
-<?php 
-include("inc/conn.php");
- $id = $_GET['id'];
-	           	$name = $_POST['name'];
-	            	$description = $_POST['description'];
-	            	$type = $_POST['type'];
-	            	$khuvuc = $_POST['khuvuc'];
-	            	$price = $_POST['price'];
-	            	$file = $_FILES['anhsp'];
-            		$song = $_FILES['song'];
-				if( !empty( $file))
-				{
-					$tenfile = rand() . $file['name'];
-					if( move_uploaded_file($file['tmp_name'], "../images/" .$tenfile)){
-						echo "success";
-					}
-					else
-					{
-						echo "Error";
-					}
-				}
-$sql = "UPDATE product SET name=?, description=?, type=?, price=? WHERE id=?";
-if(mysqli_query($conn,$sql)){
-	echo "successfully updated";
-}else{
-	echo "Error: " .mysqli_errno($conn);
-}
-}
-$id=$_GET['id'];
-$sql = mysqli_query( $conn, "SELECT * FROM music WHERE id={$id}");
-$product = mysqli_fetch_assoc($sql);
-?>
- <!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
   <head>
-  	<title>Admin Page</title>
+    <title>Admin Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-		
-		  <?php
+    
+  <?php
       include("inc/header.php");
       require_once("inc/conn.php");
+      $id = $_GET['id'];
       ?>
       <style>
         .add-song{
@@ -75,42 +43,66 @@ $product = mysqli_fetch_assoc($sql);
 
         <!-- Page Content  -->
       <div id="content" class="p-4 p-md-5 pt-5">
-<div >
-<div>
-<h3>Update Song Name : <?= $product['product_name']?></h3>
-<br><br>
-<?php
-include("inc/header.php");
-?>
-<form class="form add-song" method="post" enctype="multipart/form-data">
-			
-			<label>Input Name of the song</label>
-			<input type="text" name="name" value="<?= $product['name']?>">
 
-			<label>Input Lyric</label>
-			<textarea name="lyric"><?= $product['lyric']?></textarea>
+        <div>
+          <?php
+             if( $_SERVER['REQUEST_METHOD'] == 'POST'){
 
-			<label>Input singer</label>
-			<input type="text" name="casi" value="<?= $product['casi']?>">
+             $name = $_POST['name'];
+             $description = $_POST['description'];
+             $type = $_POST['type'];
+             $price = $_POST['price'];
+             $getdate = $_POST['getdate'];
+              $imagename = $_FILES['image']['name'];
+              $img_tmp = $_FILES['image']['tmp_name'];
+              $tar = "../images/";
+              $move = move_uploaded_file($img_tmp,$tar.$imagename);
+              if($move){
+              echo "success";
+            }
 
-			<label>Input location</label>
-			<input type="text" name="khuvuc" value="<?= $product['location']?>">
-			
-			<label>Input price</label>
-			<input type="number" name="price" value="<?= $product['price']?>">
+     
+       
+             //insert data to php
+             $sql = "UPDATE product SET name = '{$name}' ,description = '$description',  image = '{$imagename}', getdate = '{$getdate}' , price = {$price} , type = '{$type}' WHERE productid ={$id} ";
+    if(pg_query($conn, $sql)){
+      echo"done";
+      header('location:listproduct.php');
+    }
+       }
 
-			<label>Choose Image</label>
-			<img style="width: 150px;" class="anhsp" src="../images/<?= $product['anh']?>">
-			<input type="file" name="anhsp">
-			<label>Choose Song</label>
-				<audio id='audio_1' controls preload loop>
-			 		<source src='../music/<?= $product['file']?>'/>
-			 	</audio>
-			<input type="file" name="song">
-			<input type="submit" name="submit" class="btn btn-danger btn-block" value="Update">
-		</form>
-		 <script src="js/jquery.min.js"></script>
+          ?>
+      <div id="main" class="add-song">
+        <form class="form" method="post" enctype="multipart/form-data">
+    
+          <label>Input name toy</label>
+          <input type="text" placeholder="Enter name for for the toy" name="name">
+
+          <label>Input description for the toy</label>
+          <textarea name="description" placeholder="Enter description for the toy" type="text"></textarea>
+
+          <label>Input type for the toy</label>
+          <input name="type" placeholder="Enter type for the toy" type="text">
+
+          <label>Input price for the song</label>
+          <input name="price" placeholder="Enter price for the toy" type="number">
+          
+          <label>Input get date for the toy</label>
+          <input name="getdate" placeholder="Enter type for the toy" type="text">
+          
+          <label>Input Image</label>
+           <input type="file" name="image">
+
+          <input type="submit" name="submit" class="btn btn-danger btn-block" value="Add">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-</div>
+
+  </body>
+</html>
