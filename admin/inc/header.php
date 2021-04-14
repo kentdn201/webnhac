@@ -1,13 +1,7 @@
    <?php
    session_start();
 if (empty($_SESSION['current'])){
-	?>
-
-	<div class="alert alert-danger" role="alert">
-      <p class="text-center">Please Login</p>
-      </div>
-
-<?php
+	header('location:login.php');
 exit();
 }?>
 
